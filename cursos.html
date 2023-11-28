@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>CodePro Academy</title>
+  </head>
+  <body class="cont_Cursos">
+    <header>
+      <h2 class="logo">CodePro Academy</h2>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <button class="inicioSesion" id="btn_inicio">Inicia Sesión</button>
+        <button class="registro" id="btn_registro">Regístrate</button>
+      </nav>
+      <div id="usuarioLogueado">
+        <span class="iconoUsuario">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </span>
+        <p id="nombreUsuario">Anderson</p>
+      </div>
+    </header>
+    <div class="Usuario">
+      <div class="contenedorSesion">
+        <span class="icono_cerrar"
+          ><ion-icon name="close-outline"></ion-icon
+        ></span>
+        <div class="caja InicioSesion">
+          <h2>Iniciar Sesión</h2>
+          <form action="#" id="formInicioSesion">
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" id="correo" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Guardar</label>
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+            <div class="sinSesion">
+              <p>
+                ¿No tienes una cuenta?
+                <a href="#" class="link-Registro">Regístrate</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="caja Registro">
+          <h2>Únete a nuestra plataforma</h2>
+          <form action="#" id="formRegistro">
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span>
+              <input type="text" id="nombre" required />
+              <label for="">Nombre</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Acepto los términos y condiciones</label>
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <div class="sinSesion">
+              <p>
+                ¿Ya tienes una cuenta?
+                <a href="#" class="link-Inicio">Inicia Sesión</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="TotalCursos">
+      <div class="boxCursos">
+        <h2 class="titulo">Todos los Cursos</h2>
+        <div class="bloqueCurso">
+          <img src="imagenes/python_3344372.png" alt="" />
+          <h2>Programación en Python</h2>
+          <p>
+            En este curso aprenderás los fundamentos de la programación en
+            Python, incluyendo la manipulación de strings, operaciones
+            matemáticas, creación de funciones y más. Aprenderás a declarar
+            variables, identificar los tipos de datos almacenados y utilizar
+            estructuras de datos como listas, tuplas y diccionarios. También
+            dominarás el control de flujo mediante condicionales y bucles, y
+            aprenderás a definir y utilizar funciones para organizar acciones
+            específicas. Además, conocerás el proceso de ejecución de un
+            programa en Python y cómo imprimir resultados en la pantalla. Todo
+            esto, en un lenguaje sencillo y fácil de aprender.
+          </p>
+          <a href="leccionUno.html"target="_blank"><button class="btn_Curso">Ver Curso</button></a>
+        </div>
+        <div class="bloqueCurso">
+          <img src="imagenes/browser_199763.png" alt="" />
+          <h2>Programación en Java</h2>
+          <p>
+            Este curso de Java te proporcionará una comprensión profunda de la
+            programación en este lenguaje, incluyendo la creación de programas,
+            manipulación de datos, desarrollo de aplicaciones web y móviles, y
+            más. Aprenderás sobre la sintaxis clara y directa de Java, su
+            capacidad para trabajar en múltiples plataformas, su uso en el
+            desarrollo de aplicaciones empresariales y su popularidad en áreas
+            como el desarrollo web, big data y aplicaciones Android.
+          </p>
+          <a href="#"><button class="btn_Curso">Ver Curso</button></a>
+        </div>
+        <div class="bloqueCurso">
+          <img src="imagenes/c_6132222.png" alt="" />
+          <h2>Programación en C++</h2>
+          <p>
+            Este curso de C++ te proporcionará una comprensión profunda de este
+            lenguaje, desde los conceptos básicos hasta temas más avanzados.
+            Aprenderás sobre la declaración de variables, tipos de variables,
+            funciones, punteros, librerías, compiladores, estructuras de datos,
+            operadores y más. Además, comprenderás la programación modular y su
+            aplicación en C++. Este curso te preparará para trabajar en una
+            variedad de campos, desde el desarrollo de software hasta la ciencia
+            de datos y la programación de sistemas embebidos, aprovechando la
+            potencia única de C++ entre los lenguajes de alto nivel.
+          </p>
+          <a href="#"><button class="btn_Curso">Ver Curso</button></a>
+        </div>
+        <div class="bloqueCurso">
+          <img src="imagenes/html-5_5968267.png" alt="" />
+          <h2>Programación en HTML</h2>
+          <p>
+            Aprenderás a crear páginas web desde cero, utilizando HTML y CSS
+            para dar estilo y diseño a tus páginas. Además, comprenderás cómo se
+            utilizan las etiquetas HTML para estructurar el contenido de una
+            página web y cómo se utilizan los atributos para personalizar el
+            estilo y la funcionalidad de una página. Este curso te preparará
+            para trabajar en una variedad de campos, desde el desarrollo web
+            hasta el marketing digital y la creación de contenido en línea,
+            aprovechando la popularidad y la accesibilidad de HTML en la
+            creación de páginas web.
+          </p>
+          <a href="#"><button class="btn_Curso">Ver Curso</button></a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

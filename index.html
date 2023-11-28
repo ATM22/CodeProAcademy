@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>CodePro Academy</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">CodePro Academy</h2>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="#seccionCursos">Cursos</a>
+        <a href="#seccionAcercaDe">Acerca de</a>
+        <a href="#footer">Contacto</a>
+        <button class="inicioSesion" id="btn_inicio">Inicia Sesión</button>
+        <button class="registro" id="btn_registro">Regístrate</button>
+      </nav>
+      <div id="usuarioLogueado">
+        <span class="iconoUsuario">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </span>
+        <p id="nombreUsuario">Anderson</p>
+      </div>
+    </header>
+    <div class="Usuario">
+      <div class="contenedorSesion">
+        <span class="icono_cerrar"
+          ><ion-icon name="close-outline"></ion-icon
+        ></span>
+        <div class="caja InicioSesion">
+          <h2>Iniciar Sesión</h2>
+          <form action="#" id="formInicioSesion">
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" id="correo" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Guardar</label>
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+            <div class="sinSesion">
+              <p>
+                ¿No tienes una cuenta?
+                <a href="#" class="link-Registro">Regístrate</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="caja Registro">
+          <h2>Únete a nuestra plataforma</h2>
+          <form action="#" id="formRegistro">
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span>
+              <input type="text" id="nombre" required />
+              <label for="">Nombre</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Acepto los términos y condiciones</label>
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <div class="sinSesion">
+              <p>
+                ¿Ya tienes una cuenta?
+                <a href="#" class="link-Inicio">Inicia Sesión</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="presentacion">
+      <div class="bienvenida">
+        <p>Empieza a programar en</p>
+        <h1>CodePro Academy</h1>
+        <img class="imgUno" src="imagenes/hello.svg" />
+      </div>
+    </section>
+    <section class="contenedorCursos" id="seccionCursos">
+      <h2>¡Descubre nuestros cursos!</h2>
+      <p>Cada curso cuenta con lecciones con material didáctico</p>
+      <div class="box_cursos">
+        <div class="card">
+          <div class="cardImagen">
+            <img src="imagenes/python_3344372.png" alt="" />
+          </div>
+          <div class="cardTextos">
+            <h3>Python</h3>
+            <p>
+              Es un lenguaje de programación interpretado, fácil de aprender,
+              con una sintaxis única que se centra en la legibilidad y cuenta
+              con una gran biblioteca estándar que contiene códigos
+              reutilizables para casi cualquier tarea.
+            </p>
+          </div>
+          <a href="leccionUno.html"target="_blank"><button class="btn_enlaceCurso">Ver más</button></a>
+        </div>
+        <div class="card">
+          <div class="cardImagen">
+            <img src="imagenes/c_6132222.png" alt="" />
+          </div>
+          <div class="cardTextos">
+            <h3>C++</h3>
+            <p>
+              Es un lenguaje de programación de alto rendimiento, orientado a
+              objetos y con una sintaxis similar a C, que se utiliza
+              principalmente para el desarrollo de sistemas operativos, juegos y
+              aplicaciones de alto rendimiento
+            </p>
+          </div>
+          <a href="cursos.html" target="_blank" ><button class="btn_enlaceCurso">Ver más</button></a>
+        </div>
+        <div class="card">
+          <div class="cardImagen">
+            <img src="imagenes/browser_199763.png" alt="" />
+          </div>
+          <div class="cardTextos">
+            <h3>Java</h3>
+            <p>
+              Es un lenguaje de programación orientado a objetos, con una
+              sintaxis similar a C++, que se utiliza principalmente para el
+              desarrollo de aplicaciones empresariales y de servidores.
+            </p>
+          </div>
+          <a href="cursos.html" target="_blank"><button class="btn_enlaceCurso">Ver más</button></a>
+        </div>
+      </div>
+      <a href="cursos.html" target="_blank"><button class="btn_enlaceCursos">Ver Todos</button></a>
+    </section>
+    <section class="Acerca_de" id="seccionAcercaDe">
+      <img src="imagenes/coding-monochromatic-4c818.svg" />
+      <h2>¿Por qué deberías utilizar nuestra plataforma?</h2>
+      <p>
+        Nuestra plataforma ofrece una amplia gama de cursos de programación,
+        incluyendo Java, C++, Python, HTML y muchos otros. Nuestros cursos están
+        diseñados por expertos en la materia y se actualizan regularmente para
+        reflejar las últimas tendencias y tecnologías en el campo de la
+        programación. Además, ofrecemos recursos interactivos, proyectos
+        prácticos y soporte personalizado para garantizar que nuestros
+        estudiantes adquieran habilidades sólidas. Únete a nuestra comunidad de
+        aprendizaje y lleva tus habilidades de programación al siguiente nivel.
+      </p>
+    </section>
+    <footer id="footer">
+      <P>Contáctanos a traves de nuestras redes sociales</P>
+      <p>CodePro Academy</p>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <p class="copy">&copy; 2023 CodePro Academy. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

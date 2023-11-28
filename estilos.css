@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'Poppins', sans-serif;
+}
+
+/*---------------------HEADER--------------------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #010935;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    color: white;
+    user-select: none;
+  }
+  
+  .navegacion a {
+    position: relative;
+    font-size: 1.1em;
+    color: beige;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+  }
+  
+  .navegacion a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: beige;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  
+  .navegacion a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  .navegacion .inicioSesion {
+    width: 130px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid beige;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .9em;
+    color: beige;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+  }
+  
+  .navegacion .inicioSesion:hover{
+    background: beige;
+    color: #011A80;
+  }
+  
+  .navegacion .registro {
+    width: 130px;
+    height: 45px;
+    background: beige;
+    border: 2px solid beige;
+    color: #011A80;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+  }
+  
+  #usuarioLogueado{
+    display: none;
+    color: beige;
+    align-items: center;
+    text-align: center;
+
+    & .iconoUsuario{
+      font-size: 2rem;
+      position: relative;
+      top:5px
+    }
+  
+  }
+  
+  #nombreUsuario{
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  /*-----------------------Estilos para el Inicio de Sesión----------------------*/
+  .Usuario {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+  }
+  
+  .Usuario.Activado {
+    top: 0;
+    opacity: 1;
+  }
+  
+  .contenedorSesion {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: #010934;
+    color: beige;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease, heigth 0.2s ease;
+  }
+  
+  .contenedorSesion .caja {
+    width: 100%;
+    padding: 40px;
+  }
+  
+  .contenedorSesion.btn-seleccionado {
+    transform: scale(1);
+    &.activo {
+      height: 500px;
+    }
+  }
+  
+  .contenedorSesion.btn2-seleccion {
+    transform: scale(1);
+    height: 500px;
+    & .caja.InicioSesion {
+      transition: none;
+      transform: translateX(-400px);
+    }
+    & .caja.Registro {
+      position: absolute;
+      transition: transform 0.18s ease;
+      transform: translateX(0px);
+    }
+    &.enlaceI {
+      height: 440px;
+    }
+    &.enlaceI .caja.Registro {
+      transition: transform 0.18s ease;
+      transform: translateX(400px);
+    }
+    &.enlaceI .caja.InicioSesion {
+      height: 440px;
+      transition: transform 0.18s ease;
+      transform: translateX(0);
+    }
+  }
+  
+  .contenedorSesion .caja.InicioSesion {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+  }
+  .contenedorSesion.activo .caja.InicioSesion {
+    transition: none;
+    transform: translateX(-400px);
+  }
+  
+  .contenedorSesion .caja.Registro {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+  }
+  .contenedorSesion.activo .caja.Registro {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+  }
+  
+  .contenedorSesion .icono_cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: beige;
+    color: navy;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .caja h2 {
+    text-align: center;
+  }
+  .caja.Registro h2 {
+    font-size: 1.4em;
+  }
+  
+  .ingreso {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid beige;
+    margin: 30px 0;
+  }
+  .ingreso label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: beige;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .ingreso input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+  }
+  .ingreso input:focus ~ label,
+  .ingreso input:valid ~ label {
+    top: -5px;
+  }
+  .ingreso .icono {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  .recordar-olvidar {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type="checkbox"] {
+    vertical-align: middle;
+  }
+  .recordar-olvidar a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .btn {
+    width: 100%;
+    height: 45px;
+    background: beige;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  .sinSesion {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    & p a {
+      color: beige;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    & p a:hover {
+      text-decoration: underline;
+    }
+  }
+  
+/*------------------------------SECCIÓN BIENVENIDA--------------------*/
+.presentacion{
+    width: 100%;
+    height: 700px;
+    background: #010935;
+}
+.bienvenida{
+    color: beige;
+    padding: 0 30px;
+    padding-top: 250px;
+    & p, h1{
+        font-size: 3rem;
+        font-weight: 500;
+        display: block;
+    }
+    & .imgUno{
+        position: absolute;
+        right: 10px;
+        bottom: 35px;
+        width: px;
+    }
+}
+
+/*----------------------SECCIÓN PRESENTACIÓN CURSOS------------------*/
+.contenedorCursos {
+    width: 100%;
+    height: 700px;
+    padding: 50px 60px;
+    text-align: center;
+    background: #CCDADA;
+    & h2{
+        font-size: 2rem;
+    }
+    & h2, p{
+        text-align: center;
+    }
+}
+.box_cursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    padding-bottom: 50px;
+}
+.card{
+    width: 350px;
+    text-align: center;
+    height: 350px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background: white
+}
+.cardImagen{
+    padding: 20px 0;
+    border-radius: 10px;
+    background: white;
+    & img {
+        width: 100px;
+    }
+}
+.cardTextos{
+    height: 150px;
+    color: #738FA7;
+    & h3{
+        font-size: 1.5rem;
+    }
+    & p{
+        font-size: .8rem;
+        font-weight: 400;
+        text-align: justify;
+        padding: 5px 20px;
+    }
+}
+.btn_enlaceCurso{
+    width: 100px;
+    height: 40px;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: #738FA7;
+        color: white;
+    }
+}
+.btn_enlaceCursos{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #8491AA;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        background: #738FA7;
+        color: white;
+    }
+}
+
+/*------------------------------------Sección Acerca De---------------------------*/
+.Acerca_de{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    & img{
+        width: 500px;
+        position: absolute;
+        top:7%; left: 10%;
+    }
+    & h2{
+        font-size: 2.5rem; 
+        position: absolute;
+        top: 15%; left: 50%; right: 10%;
+        color: #0C4160;
+    }
+    & p{
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: justify;
+        top: 35%; left: 50%; right: 7%;
+      
+    }
+}
+
+/*------------------------------------Sección FOOTER---------------------------*/
+footer{
+    background: #010935;
+    height: 200px;
+    color: #CCDADA;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    & p{
+       padding-bottom: 5px;
+    }
+    & .copy{
+        padding-top: 60px;
+    }
+    & a{
+        color: #CCDADA;
+        padding-right: 10px;
+    }
+}
+
+/*------------------------PRESENTACIÓN TODOS LOS CURSOS----------------*/
+.TotalCursos{
+    width: 100%;
+    height: 100%;
+    background: #CCDADA;
+  }
+  .boxCursos{
+    padding-top: 150px;
+    & .titulo{
+      padding-left: 40%;
+      padding-bottom: 20px;
+      font-size: 2.3rem;
+      color:#010934;
+    }
+  }
+  .bloqueCurso{
+    margin-left: 20%; margin-right: 20%;
+    width: 900px;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+    background: white;
+    display: inline-block;
+    & img{
+      width: 130px;
+      padding-left: 20px;
+      position: absolute;
+      top: 25%; left: 10px;
+  
+    }
+    & h2{
+      color: #738FA7;
+      position: absolute;
+      top: 8%; left: 20%;
+    }
+    & p{
+      text-align: justify;
+      font-size: .9rem;
+      position: absolute;
+      top: 20%; left: 20%; right: 10%;
+    }
+    & .btn_Curso{
+    width: 125px; height: 45px;
+    background: #8491AA;  color: white;
+    border: none; border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em; font-weight: 500;
+    transition: 0.5s;
+    position: absolute;
+    right: 10%; bottom: 10%;
+    &:hover {
+      background: #738FA7;
+    }
+    }
+  }
+  
+  /*------------------------------SECCIÓN LECCIÓN DE CURSO-------------------------------*/
+  .Principal {
+    width: 100%;
+    height: 100%;
+  }
+  .contenido {
+    padding-top: 150px; 
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: white;
+    text-align: center;
+    & h4{
+      margin-bottom: 10px;
+    }
+  }
+  .lecciones{
+    margin: 0px 20px;
+    padding: 10px 10px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    &:hover{
+        background: rgb(248, 246, 246);
+    }
+    & p{
+        text-align: left;
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    & .nombreLeccion{
+        font-weight: 300;
+    }
+    }
+
+  .cursos {
+  padding-top: 120px;
+  display: flexbox;
+  float: left;
+  width: 75%;
+  height: 950px;
+  background: #f1f6f9;
+  text-align: center;
+  & h1{
+    font-size: 2.3rem;
+    font-weight: 800;
+    text-align: center;
+    color: #001932;
+  }
+  & h1::after{
+    content:'';
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 700px;
+    height: 3px;
+    background: darkblue;
+    margin-bottom: 20px;
+  }
+  }
+  
+  .historia {
+  & p {
+    text-align: justify;
+    padding: 20px 100px;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  &.esconder{
+    display: none;
+  }
+  }
+  
+  .leccion {
+    width: 200px;
+    height: 50px;
+    background: #8491AA;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    &:hover {
+      background: #738FA7;
+    }
+  }
+  
+  .contenidoLeccion{
+    display: none;
+    & h2{
+      font-size: 1.6rem;
+      padding-bottom: 20px;
+    }
+    & p{
+      text-align: justify;
+      padding: 20px 100px;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+  }
+  .contenidoLeccion.aparecer{
+    display: block;
+  }
+  
+  .btnCuestionario, .btnRegresar {
+    width: 150px;
+    height: 45px;
+    background: #274472;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    &:hover{
+      background: #C3E0E5;
+      color: #010934
+    }
+  }
+  
+
+

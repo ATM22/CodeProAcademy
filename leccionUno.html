@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>CodePro Academy</title>
+  </head>
+  <body class="cont_Cursos">
+    <header>
+      <h2 class="logo">CodePro Academy</h2>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <button class="inicioSesion" id="btn_inicio">Inicia Sesión</button>
+        <button class="registro" id="btn_registro">Regístrate</button>
+      </nav>
+      <div id="usuarioLogueado">
+        <span class="iconoUsuario">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </span>
+        <p id="nombreUsuario">Anderson</p>
+      </div>
+    </header>
+    <div class="Usuario">
+      <div class="contenedorSesion">
+        <span class="icono_cerrar"
+          ><ion-icon name="close-outline"></ion-icon
+        ></span>
+        <div class="caja InicioSesion">
+          <h2>Iniciar Sesión</h2>
+          <form action="#" id="formInicioSesion">
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" id="correo" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Guardar</label>
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+            <div class="sinSesion">
+              <p>
+                ¿No tienes una cuenta?
+                <a href="#" class="link-Registro">Regístrate</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="caja Registro">
+          <h2>Únete a nuestra plataforma</h2>
+          <form action="#" id="formRegistro">
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span>
+              <input type="text" id="nombre" required />
+              <label for="">Nombre</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required />
+              <label for="">Correo Electrónico</label>
+            </div>
+            <div class="ingreso">
+              <span class="icono"
+                ><ion-icon name="lock-closed"></ion-icon
+              ></span>
+              <input type="password" required />
+              <label for="">Contraseña</label>
+            </div>
+            <div class="recordar-olvidar">
+              <input type="checkbox" id="guardar" />
+              <label for="guardar">Acepto los términos y condiciones</label>
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <div class="sinSesion">
+              <p>
+                ¿Ya tienes una cuenta?
+                <a href="#" class="link-Inicio">Inicia Sesión</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="Principal">
+      <div class="contenido">
+        <h3>CONTENIDO</h3>
+        <h4>Curso Python</h4>
+        <div class="lecciones">
+          <p>UNIDAD 1</p>
+          <p class="nombreLeccion">Asignación de Variables</p>
+        </div>
+        <div class="lecciones">
+          <p>UNIDAD 2</p>
+          <p class="nombreLeccion">Manipulación de cadenas de caracteres</p>
+        </div>
+        <div class="lecciones">
+          <p>UNIDAD 3</p>
+          <p class="nombreLeccion">Palabras reservadas</p>
+        </div>
+        <div class="lecciones">
+          <p>UNIDAD 4</p>
+          <p class="nombreLeccion">Operadores Aritméticos</p>
+        </div>
+        <div class="lecciones">
+          <p>UNIDAD 4</p>
+          <p class="nombreLeccion">Sentencias Condicionales</p>
+        </div>
+      </div>
+      <div class="cursos">
+        <h1>PROGRAMACIÓN EN PYTHON</h1>
+        <div class="historia">
+          <p>
+            Python es un lenguaje de programación de alto nivel ampliamente
+            utilizado en aplicaciones web, desarrollo de software, ciencia de
+            datos, machine learning y otros campos en auge. A diferencia de
+            otros lenguajes como Java o .NET, Python es interpretado, lo que
+            significa que no es necesario compilarlo para ejecutar las
+            aplicaciones escritas en Python. Es un lenguaje sencillo de leer y
+            escribir debido a su alta similitud con el lenguaje humano. Además,
+            es multiplataforma, de código abierto y gratuito, lo que permite
+            desarrollar software sin límites. Con el paso del tiempo, Python ha
+            ganado adeptos gracias a su sencillez y a sus amplias posibilidades,
+            sobre todo en los últimos años, ya que facilita trabajar con
+            inteligencia artificial, big data, machine learning y data science
+          </p>
+          <p>
+            El origen de Python se remonta a finales de los años 80,
+            concretamente en 1989, cuando el programador holandés Guido Van
+            Rossum comenzó a crear un nuevo lenguaje de programación. La
+            necesidad personal de disponer de un lenguaje sencillo de leer,
+            escribir y soportar fue el principal motivo que impulsó a Van Rossum
+            a crear Python. Entre los objetivos principales de Guido estaba
+            crear un lenguaje que obtuviera una sintaxis simple y limpia, con el
+            que los programadores pudieran escribir el código de una forma
+            clara, concisa y seguros de lo que estaban haciendo. En un
+            principio, recibió influencia de ciertos lenguajes como ABC,
+            Moldua-3 y C++. En 1991 tuvo lugar el lanzamiento de la primera
+            versión de Python, la 0.9.0. Esto significó un antes y un después en
+            el sector de la programación, ya que comenzaron a realizarse mejoras
+            continuas por parte de Guido y otros profesionales. En el constante
+            avance de Python se ha trabajado para incluir en él ciertas
+            modernidades, la programación orientada a objetos de la que se
+            disfruta hoy en día y la amplia biblioteca que lo caracteriza
+          </p>
+          <button class="leccion">Comenzar Lección 1</button>
+        </div>
+        <div class="contenidoLeccion">
+          <h2>Lección 1: Asignación de Variables</h2>
+          <iframe
+            class="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/w8VZxo1TlnU?si=MQLs-kJpRHBaJKtt&amp;start=6"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p>
+            En esta lección, aprenderás que las variables en
+            Python son espacios en la memoria donde se almacenan y recuperan
+            datos, habiendo dos tipos principales: números y texto. También aprenderás a 
+            cómo declarar una variable y cómo Python identifica el tipo de datos
+            almacenados. El video analiza la diferenciación de variables según
+            la distinción entre mayúsculas y minúsculas, el proceso de ejecución
+            y lo que se imprime en la pantalla cuando se ejecuta un programa en
+            Python. Además, se enfatiza la simplicidad del uso de variables en
+            Python.
+          </p>
+          <button class="btnRegresar">Regresar</button>
+          <a href="formulario.html"><button class="btnCuestionario">Ir a Cuestionario</button></a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
